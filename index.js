@@ -2,7 +2,7 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const prompt = require('prompt-sync')({ sigint: true });
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 
 // File Paths
 const hostsFilePath =
