@@ -2,6 +2,10 @@
 
 A distraction blocker for macOS and Linux that allows users to block chosen domains.
 
+<div align="center">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/170449321/591998299-3b12d999-de1b-47a1-880a-5e8cce9a9a92.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260513T183559Z&X-Amz-Expires=300&X-Amz-Signature=dd52475b07307860f7e1a52341b48b762268e042a1b4b938991fd4a381f54088&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" width="66%"/>
+</div>
+
 ### Supported platforms
 
 **Supported:** macOS, Linux
