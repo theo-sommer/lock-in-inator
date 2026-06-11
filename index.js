@@ -160,18 +160,17 @@ async function tempUnblockSites(blockedSites, duration = 10 * 60 * 1000) {
 
   // Handle time left
   let minsRemaining = Math.floor(duration / (60 * 1000));
-  console.clear();
-  console.log(
-    '\u001b[0;36m' +
-      `Started break for ${minsRemaining} min ` +
-      '\u001b[0m' +
-      '\u001b[2m' +
-      '(Press Ctrl+C to end the break early)',
-  );
-
   try {
     while (minsRemaining > 0) {
-      console.log(`    Time left: ${minsRemaining} mins`);
+      console.clear();
+      console.log(
+        '\u001b[0;36m' +
+          `Started break for ${Math.floor(duration / (60 * 1000))} min ` +
+          '\u001b[0m' +
+          '\u001b[2m' +
+          '(Press Ctrl+C to end the break early)',
+      );
+      console.log(`    Time left: ${minsRemaining} min`);
       await sleep(60 * 1000);
       minsRemaining--;
     }
@@ -190,19 +189,21 @@ async function tempUnblockSites(blockedSites, duration = 10 * 60 * 1000) {
 
 // Interface
 async function terminalInterface() {
-  const welcomeText =
-    '\u001b[1;36m' +
-    'Site Blocker:\n' +
-    '\u001b[0;36m' +
-    '  Current Blocked Sites are:\n' +
-    '\u001b[0m' +
-    '\u001b[2m' +
-    blockedSites.map((site) => '    ' + site + '\n').join('');
-  console.log(welcomeText);
-
   // keep asking user until a correct input is given
   let userIsDone = false;
   while (!userIsDone) {
+    console.clear();
+
+    const welcomeText =
+      '\x1b[0m\u001b[1;36m' +
+      'Site Blocker:\n' +
+      '\u001b[0;36m' +
+      '  Current Blocked Sites are:\n' +
+      '\u001b[0m' +
+      '\u001b[2m' +
+      blockedSites.map((site) => '    ' + site + '\n').join('');
+    console.log(welcomeText);
+
     // ask if the user wants to add or remove a url
     console.log(
       '\u001b[0;36m' +
